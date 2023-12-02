@@ -11,8 +11,8 @@ public class Calibration {
     String [] nums = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 
     public Calibration(String path) {
-        lines     = new ArrayList<String>();
-        this.file = new File(path);
+        this.lines = new ArrayList<String>();
+        this.file  = new File(path);
     }
 
     public int getCalibrationValues() {
@@ -97,7 +97,6 @@ public class Calibration {
         int ret = 0;
         for (String num : nums) {
             int index = line.lastIndexOf(num);
-            // doesnt get last occurence
             if (index != -1) {
                 if (index > this.last) {
                     this.last = index;
